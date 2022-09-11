@@ -1,0 +1,65 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 0.05rem;
+    font-family: '黑体';
+}
+
+table {
+    border-collapse: collapse;
+    /* 合并为单一的边框 */
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+input {
+    padding: 1px;
+    vertical-align: middle;
+    /* 垂直方向居中对齐 */
+    line-height: normal;
+}
+
+/* css定义超链接四个状态也有顺序的 */
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #1F376D;
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+    color: #BD0A01;
+    border: none;
+}
+
+/* 阿里字体图标专用 */
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+/* 引入字体 */
+@font-face {
+    font-family: 'Number';
+    src: url('font2.TTF');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,153 @@
+<!-- 显示当前时间 -->
+<style>
+    .time {
+        min-width: 750px;
+        color: #fff;
+        line-height: 0.15rem;
+
+        /* 绝对定位 */
+        position: absolute;
+        right: 0.28rem;
+        top: 0.16rem;
+
+        /* 弹性盒布局 */
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .time>span {
+        /* 缩放实现更小的字体效果 */
+        transform: scale(0.8);
+    }
+
+    .time p {
+        margin: 0 0.02rem;
+    }
+
+    .time p:nth-child(7) {
+        margin-left: 0.23rem;
+    }
+
+    /* 文字层 */
+    .time p span {
+        width: 0.089rem;
+        height: 0.14rem;
+        font-size: 0.11rem;
+        display: inline-block;
+        text-align: center;
+
+        /* 文字渐变效果 */
+        background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(255, 255, 255, 1)), to(rgba(67, 148, 228, 1)));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* 背景层 */
+    .bg p span {
+        background: url(./images/back_time.png);
+        background-size: 100%;
+        background-position-y: 0.012rem;
+        background-repeat: no-repeat;
+        opacity: calc(0.5);
+        border-radius: 0.02rem;
+
+        /* 设置标签阴影效果 */
+        box-shadow: 0 0 15px #fff;
+    }
+</style>
+<div class="time bg">
+    <p>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </p>
+    <span>年</span>
+    <p>
+        <span></span>
+        <span></span>
+    </p>
+    <span>月</span>
+    <p>
+        <span></span>
+        <span></span>
+    </p>
+    <span>日</span>
+    <p>
+        <span></span>
+        <span></span>
+    </p>
+    <span>:</span>
+    <p>
+        <span></span>
+        <span></span>
+    </p>
+    <span>:</span>
+    <p>
+        <span></span>
+        <span></span>
+    </p>
+</div>
+
+<div class="time">
+    <p id="y"></p>
+    <span>年</span>
+    <p id="mo"></p>
+    <span>月</span>
+    <p id="d"></p>
+    <span>日</span>
+    <p id="h"></p>
+    <span>:</span>
+    <p id="m"></p>
+    <span>:</span>
+    <p id="s"></p>
+</div>
+<script>
+    show()
+    function show() {
+        var now = new Date();
+        var year = now.getFullYear();   // 得到年份
+        var month = now.getMonth() + 1; // 得到月份
+        var date = now.getDate();       // 得到日期
+        // var day = now.getDay();      // 得到周几
+        var hour = now.getHours();      // 得到小时数
+        var minute = now.getMinutes();  // 得到分钟数
+        var second = now.getSeconds();  // 得到秒数
+        document.getElementById("y").innerHTML = `
+            <span >${year.toString().slice(0, 1)}</span>
+            <span>${year.toString().slice(1, 2)}</span>
+            <span>${year.toString().slice(2, 3)}</span>
+            <span>${year.toString().slice(3, 4)}</span>
+        `;
+
+        // 判断是否是两位数，不是两位数的变量开头加“0”
+        if (month < 10) { month = '0' + month };
+        if (date < 10) { date = '0' + date };
+        if (hour < 10) { hour = '0' + hour };
+        if (minute < 10) { minute = '0' + minute };
+        if (second < 10) { second = '0' + second };
+
+        // 将对应的变量结合HTML标签渲染到dom树中
+        document.getElementById("mo").innerHTML = `
+            <span>${month.toString().slice(0, 1)}</span>
+            <span>${month.toString().slice(1, 2)}</span>
+        `;
+        document.getElementById("d").innerHTML = `
+            <span>${date.toString().slice(0, 1)}</span>
+            <span>${date.toString().slice(1, 2)}</span>
+        `;
+        document.getElementById("h").innerHTML = `
+            <span>${hour.toString().slice(0, 1)}</span>
+            <span>${hour.toString().slice(1, 2)}</span>
+        `;
+        document.getElementById("m").innerHTML = `
+            <span>${minute.toString().slice(0, 1)}</span>
+            <span>${minute.toString().slice(1, 2)}</span>
+        `;
+        document.getElementById("s").innerHTML = `
+            <span>${second.toString().slice(0, 1)}</span>
+            <span>${second.toString().slice(1, 2)}</span>
+        `;
+        setTimeout(show, 1000);         // 定时器一直调用show()函数
+    }
+</script>

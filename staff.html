@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>员工绩效分析</title>
+    <script src="./js/rem.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/staff.css">
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="title">
+        <h1>员工绩效分析</h1>
+        <h2>EMPLOYEE PERFORMANCE ANALYSIS</h2>
+    </div>
+    <section>
+        <ul id="staff_data">
+            <!-- <li>
+                <div>
+                    <p>当日销售额（元）</p>
+                    <p>3,006</p>
+                </div>
+                <div>
+                    <p>上周总数</p>
+                    <p>16,098</p>
+                    <p>上月总数</p>
+                    <p>16,098</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>今日客单均价（元）</p>
+                    <p>179,803</p>
+                </div>
+                <div>
+                    <p>上周均价</p>
+                    <p>13,478</p>
+                    <p>上月均价</p>
+                    <p>13,478</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>当日交易数</p>
+                    <p>21,547</p>
+                </div>
+                <div>
+                    <p>上周总数</p>
+                    <p>19,127</p>
+                    <p>上月总数</p>
+                    <p>19,127</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>人均销售额（元）</p>
+                    <p>5,720</p>
+                </div>
+                <div>
+                    <p>上周总数</p>
+                    <p>4,904</p>
+                    <p>上月总数</p>
+                    <p>4,904</p>
+                </div>
+            </li> -->
+        </ul>
+    </section>
+    <!-- 渐变线条 -->
+    <div class="top_bg"></div>
+    <div class="body">
+        <article>
+            <ul>
+                <li>
+                    <p class="title">今日实时导购次数/用户数/交易数趋势对比</p>
+                    <div id="chart01"></div>
+                </li>
+                <li>
+                    <p class="title">今日工作干扰行为及时长排行</p>
+                    <div id="chart02"></div>
+                </li>
+                <div class="content">
+                    <div class="left">
+                        <p>今日导购互动行为平均数</p>
+                        <p>1200次</p>
+                    </div>
+                    <div class="right">
+                        <p>当日员工工作干扰平均时长</p>
+                        <p>186<span>分钟</span></p>
+                    </div>
+                </div>
+                <li>
+                    <p class="title">销售额与导购互动趋势</p>
+                    <div id="chart03"></div>
+                </li>
+                <li>
+                    <p class="title">客单价与导购互动趋势</p>
+                    <div id="chart04"></div>
+                </li>
+                <li>
+                    <p class="title">交易数与导购互动趋势</p>
+                    <div id="chart05"></div>
+                </li>
+            </ul>
+        </article>
+        <aside>
+            <p class="title">本月人效排名</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>员工姓名</th>
+                        <th>人效</th>
+                        <th>升降</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="./images/1.png" alt=""></td>
+                        <td>张三</td>
+                        <td>123</td>
+                        <td style="color: #e93ca7;">&uarr;</td>
+                    </tr>
+                    <tr>
+                        <td><img src="./images/2.png" alt=""></td>
+                        <td>李四</td>
+                        <td>123</td>
+                        <td style="color: #e93ca7;">&uarr;</td>
+                    </tr>
+                    <tr>
+                        <td><img src="./images/3.png" alt=""></td>
+                        <td>王五</td>
+                        <td>123</td>
+                        <td style="color: #439aff;">&darr;</td>
+                    </tr>
+                    <tr>
+                        <td><img src="./images/4.png" alt=""></td>
+                        <td>赵六</td>
+                        <td>123</td>
+                        <td style="color: #439aff;">&darr;</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>赵六</td>
+                        <td>123</td>
+                        <td style="color: #439aff;">&darr;</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>赵六</td>
+                        <td>123</td>
+                        <td style="color: #439aff;">&darr;</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>赵六</td>
+                        <td>123</td>
+                        <td style="color: #439aff;">&darr;</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>赵六</td>
+                        <td>123</td>
+                        <td style="color: #439aff;">&darr;</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>赵六</td>
+                        <td>123</td>
+                        <td style="color: #439aff;">&darr;</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>赵六</td>
+                        <td>123</td>
+                        <td style="color: #439aff;">&darr;</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>赵六</td>
+                        <td>123</td>
+                        <td style="color: #439aff;">&darr;</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>赵六</td>
+                        <td>123</td>
+                        <td style="color: #439aff;">&darr;</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>赵六</td>
+                        <td>123</td>
+                        <td style="color: #439aff;">&darr;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </aside>
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/echarts.js"></script>
+    <script src="./js/staff.js"></script>
+</body>
+
+</html>

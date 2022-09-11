@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品销量分析</title>
+    <script src="./js/rem.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/commodity.css">
+</head>
+<header id="header"></header>
+<div class="body">
+    <article class="year">
+        <p class="title">年销售额贡献最高商品TOP3</p>
+        <ul>
+            <li>
+                <p class="name">热销产品1</p>
+                <p class="name">热销产品2</p>
+                <p class="name">热销产品3</p>
+            </li>
+            <li>
+                <p class="title">年销售额贡献最高商品1</p>
+                <div id="chart01"></div>
+            </li>
+            <li>
+                <p class="title">年销售额贡献最高商品2</p>
+                <div id="chart02"></div>
+            </li>
+            <li>
+                <p class="title">年销售额贡献最高商品3</p>
+                <div id="chart03"></div>
+            </li>
+        </ul>
+    </article>
+    <article class="com">
+        <ul>
+            <li>
+                <p>热销商品TOP5</p>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>序号</td>
+                                <td>商品</td>
+                                <td>单价</td>
+                                <td>销量</td>
+                                <td>总销量</td>
+                                <td>高于平均贡献</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>25%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+            <li>
+                <p>滞销商品TOP5</p>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>序号</td>
+                                <td>商品</td>
+                                <td>单价</td>
+                                <td>销量</td>
+                                <td>总销量</td>
+                                <td>低于平均贡献</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>25%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+            <li>
+                <p>用户最爱商品组合Top5</p>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>序号</td>
+                                <td>商品组合</td>
+                                <td>组合价</td>
+                                <td>销量</td>
+                                <td>总消费额</td>
+                                <td>组合销售比例</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>25%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+        </ul>
+    </article>
+    <article class="centre">
+        <div class="top">
+            <h1>商品销量分析</h1>
+            <h2>MERCHANDISE SALES ANALYSIS</h2>
+        </div>
+        <ul>
+            <li>
+                <div>
+                    <img src="./images/backicon_01.png" alt="">
+                    <p style="color: #73d5ed;">日销售额</p>
+                    <p>3000<span>元</span></p>
+                    <div class="line"></div>
+                </div>
+                <div>
+                    <img src="./images/backicon_02.png" alt="">
+                    <p style="color: #f3c482;">日销售数量</p>
+                    <p>1350<span>单</span></p>
+                    <div class="line"></div>
+                </div>
+                <div>
+                    <img src="./images/backicon_03.png" alt="">
+                    <p style="color: #cc7070;">日销平均客单价</p>
+                    <p>1234<span>元</span></p>
+                    <div class="line"></div>
+                </div>
+            </li>
+            <li>
+                <p class="title">销售额/增长率趋势</p>
+                <div id="chart04"></div>
+            </li>
+            <li>
+                <div>
+                    <p class="title">商品类别销售额排名TOP5</p>
+                    <div class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>序号</td>
+                                    <td>商品类别</td>
+                                    <td>销量</td>
+                                    <td>总销售额</td>
+                                    <td>消费贡献占比</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>25%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <p class="title">商品销售额排名Top5</p>
+                    <div class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>序号</td>
+                                    <td>商品名称</td>
+                                    <td>销量</td>
+                                    <td>总销售额</td>
+                                    <td>消费贡献占比</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>25%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </article>
+    <article class="ranking">
+        <p>不同类别商品销售额排名Top10</p>
+        <div>
+            <div id="chart05"></div>
+            <ul>
+                <li class="cursor">
+                    <div><img src="./images/icon_01.png" alt=""></div>
+                    <p>新鲜水果</p>
+                </li>
+                <li>
+                    <div><img src="./images/icon_02.png" alt=""></div>
+                    <p>居家用品</p>
+                </li>
+                <li>
+                    <div><img src="./images/icon_03.png" alt=""></div>
+                    <p>衣物清洁</p>
+                </li>
+                <li>
+                    <div><img src="./images/icon_04.png" alt=""></div>
+                    <p>坚果蜜饯</p>
+                </li>
+                <li>
+                    <div><img src="./images/icon_05.png" alt=""></div>
+                    <p>休闲零食</p>
+                </li>
+                <li>
+                    <div><img src="./images/icon_06.png" alt=""></div>
+                    <p>牛奶水饮</p>
+                </li>
+                <li>
+                    <div><img src="./images/icon_07.png" alt=""></div>
+                    <p>纸品湿巾</p>
+                </li>
+                <li>
+                    <div><img src="./images/icon_11.png" alt=""></div>
+                    <p>小家点馆</p>
+                </li>
+            </ul>
+        </div>
+    </article>
+    <article class="right">
+        <ul>
+            <li>
+                <p>主力客户购买商品TOP5</p>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>序号</td>
+                                <td>商品</td>
+                                <td>单价</td>
+                                <td>销量</td>
+                                <td>总销费额</td>
+                                <td>消费贡献占比</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>25%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+            <li>
+                <p>主力客户购买商品类别TOP5</p>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>序号</td>
+                                <td>商品类别</td>
+                                <td>销量</td>
+                                <td>总销费额</td>
+                                <td>消费贡献占比</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>25%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+        </ul>
+    </article>
+</div>
+
+
+<script src="./js/jquery.js"></script>
+<script src="./js/echarts.js"></script>
+<script src="./js/commodity.js"></script>
+
+<body>
+
+</body>
+
+</html>
